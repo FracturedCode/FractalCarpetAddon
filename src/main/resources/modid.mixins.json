@@ -6,7 +6,10 @@
     "EndGateway_noCooldownMixin",
     "EndSpikeFeature_generationMixin",
     "FightManager_structureGeneration",
-    "MinecraftServer_noopMixin"
+    "MinecraftServer_multiThreadedDimensionMixin",
+    "MinecraftServer_noopMixin",
+    "ServerChunkManager_multithreadedDimensionMixin",
+    "ServerWorld_multithreadedDimensionMixin"
   ],
   "client": [
   ],
