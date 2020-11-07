@@ -4,14 +4,11 @@ import com.fractalsmp.fractal_carpet_addon.FractalSimpleSettings;
 import net.minecraft.entity.boss.ServerBossBar;
 import net.minecraft.entity.boss.dragon.EnderDragonFight;
 import net.minecraft.entity.boss.dragon.EnderDragonSpawnState;
-import net.minecraft.entity.decoration.EnderCrystalEntity;
-import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
@@ -26,14 +23,6 @@ public abstract class FightManager_structureGeneration {
     @Shadow protected abstract void setSpawnState(EnderDragonSpawnState enderDragonSpawnState);
 
     private EnderDragonSpawnState tempDragonSpawnState;
-
-
-    /*@Redirect(method="tick", at=@At(value = "INVOKE", target = "Lnet/minecraft/entity/boss/dragon/EnderDragonSpawnState;run(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/boss/dragon/EnderDragonFight;Ljava/util/List;ILnet/minecraft/util/math/BlockPos;)V"))
-    public void decideIfRun(EnderDragonSpawnState enderDragonSpawnState, ServerWorld world, EnderDragonFight fight, List<EnderCrystalEntity> crystals, int i, BlockPos blockPos) {
-        if (FractalSimpleSettings.endMainIslandStructureGen) {
-            //this.dragonSpawnState.run(world, fight, crystals, i, blockPos);
-        }
-    }*/
 
     @Inject(method="tick", at=@At("HEAD"))
     public void suppressTowerExplosionAndBlockDeletion(CallbackInfo ci) {
