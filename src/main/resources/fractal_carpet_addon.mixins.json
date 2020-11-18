@@ -9,7 +9,6 @@
     "FightManager_structureGeneration",
     "MinecraftClient_noopMixin",
     "MinecraftServer_noopMixin",
-    "ServerPlayerEntity_noObsidianPlatformMixin",
     "ServerWorld_noObsidianPlatformMixin"
   ],
   "client": [

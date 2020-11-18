@@ -19,7 +19,7 @@ public class FractalSimpleSettings {
     public static boolean endMainIslandStructureGen = true;
 
     @Rule(
-            desc = "Toggle for end obsidian platform generation",
+            desc = "Toggle for end obsidian platform generation excluding players",
             category = {FractalSettingCategory, FEATURE, EndSettingsCategory}
     )
     public static boolean noObsidianPlatform = false;
