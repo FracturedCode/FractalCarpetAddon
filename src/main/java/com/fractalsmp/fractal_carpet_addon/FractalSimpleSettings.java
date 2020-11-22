@@ -23,4 +23,10 @@ public class FractalSimpleSettings {
             category = {FractalSettingCategory, FEATURE, EndSettingsCategory}
     )
     public static boolean noObsidianPlatform = false;
+
+    @Rule(
+            desc = "Toggle for old llama dupe bug that was patched",
+            category = {FractalSettingCategory, FEATURE}
+    )
+    public static boolean llamaDupeExploit = false;
 }
