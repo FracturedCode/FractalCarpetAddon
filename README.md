@@ -1,5 +1,7 @@
 # FractalCarpetAddon
-Development has moved to the [AlephSMP page](https://github.com/AlephSMP/Aleph-Carpet/)
+~~Development has moved to the [AlephSMP page](https://github.com/AlephSMP/Aleph-Carpet/)~~
+
+**[EpsilonSMP](https://github.com/epsilonsmp) is the spiritual successor of Aleph and there is a new mod.**
 
 A carpet extension made for [FractalSMP](https://fractalsmp.com) using MC 1.15.
 There is a 1.16 branch that will be merged to master once Fractal moves to 1.16.
